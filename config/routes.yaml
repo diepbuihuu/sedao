@@ -1,3 +1,15 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+user_list:
+    path: /user
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\UserController::list
+    methods: GET
+user_add:
+    path: /user
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\UserController::add
+    methods: POST
+user_delete:
+    path: /user/delete/{id}
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\UserController::delete
+    methods: GET
